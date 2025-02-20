@@ -1,0 +1,20 @@
+server:
+  port: 3000
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: java17
+    key-password: java17
+    client-auth: need
+    trust-store: classpath:clienttruststore.p12
+    trust-store-password: changeit
+
+# below property will enable actuator endpoints in swagger
+springdoc:
+  show-actuator: true
+
+# below endpoints enable health endpoints to show all details
+management:
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
